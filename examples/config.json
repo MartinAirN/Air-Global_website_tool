@@ -1,0 +1,90 @@
+{
+	"error": {
+		"image_not_found": "Path/To/Image.jpg"
+	},
+    "site": {
+        "name": "Air-Global",
+        "subTitle": "Photography Example Website",
+        "logo": "Path/To/Publicly/Available/Image.png",
+		"folders": {
+			"images": "images/",
+			"cache": "cache/"
+		}
+    },
+    "author": {
+        "name": "Your Name Here",
+        "title": "Photographer Title",
+        "slogan": "Your Slogan",
+        "description": "Your Description."
+    },
+    "contact": {
+        "email": {
+            "user": "photography",
+            "domain": "example.com"
+        },
+        "location": "City, Country",
+		"phone": "Your phone number here"
+    },
+    "socialMedia": {
+		"instagramUrl": "link to your instagram",
+		"istagramImageCount": "5",
+		"facebookUrl": "",
+		"twitterUrl": ""
+	},
+	"images": {
+		"hiddenAlbum": "hiddenAlbums",
+		"author": "author/",
+		"instagram": "instagram/",
+		"albumSubTitleFile": "subtitle.txt",
+		"view": {
+			"quality": 80,
+			"width": "1280",
+			"height": "1280",
+			"thumbnail": {
+				"width": "200",
+				"height": "200"
+			},
+			"sortOrder": {
+				"collectionReverse": "true",
+				"albumReverse": "false"
+			}
+		}
+	},
+	"settings": {
+		"maxFooterCategories": "5",
+		"pages": [
+			{
+				"url": "/", "__urlcomment__": "Do not change",
+				"name": "index",
+				"title": "Home"
+			},
+			{
+				"url": "/collection", "__urlcomment__": "Do not change",
+				"name": "album", "__namecomment__": "Used as base image directory",
+				"title": "Collection"
+			},
+			{
+				"url": "/services", "__urlcomment__": "Do not change",
+				"name": "services",
+				"title": "Services"
+			}
+		]
+	},
+	"services": {
+		"studio": {
+			"title": "Example 1",
+			"description": "Description matching the camera icon",
+			"icon": "CSS Class that adds your Camera icon"
+		},
+		"equipment": {
+			"title": "Example 2",
+			"description": "To any situation I bring my own equipment. With this I am able to capture situations from close by to far away with great detail.",
+			"icon": "CSS Class that adds your Lens icon"
+		},
+		"print": {
+			"title": "Example 3",
+			"description": "I myself do not have any printing services.\nI do have experience with some services available in the Netherlands, maybe I can steer you in the right direction.",
+			"icon": "CSS Class that adds your Printer icon"
+		}
+	}
+}

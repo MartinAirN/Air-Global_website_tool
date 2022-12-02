@@ -1,0 +1,19 @@
+div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.class}`)
+    div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.container.class}`)
+        h2(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.container.header.class}`) Archives (Top Categories)
+        ul(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.container.list.class}`)
+            each page in config.settings.pages
+                if (page.url === "/collection")
+                    - var labels = imgStore.getLabels(page.name, true)
+                    - var total = 0
+                    - var done = 0
+                    each label in labels
+                        if (done < 5)
+                            - done = done + 1
+                            li
+                                a(href=`${helper.collectionLinkBuilder(page.url, undefined, label.name, true)}`) #{helper.capitalize(label.name)}
+                                    span #{label.value}
+                        - total += label.value
+                    li
+                        a(href=`${helper.collectionLinkBuilder(page.url, undefined, undefined, true)}`) Show All
+                            span #{total}

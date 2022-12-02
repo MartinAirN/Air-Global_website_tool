@@ -1,0 +1,20 @@
+//- Nav
+a(href="#", class=`${sitestructure.page.common.navigation.toggle_link.class}`)
+  i
+aside(id=`${sitestructure.page.common.navigation.aside.id}`, class=`${sitestructure.page.common.navigation.aside.class}`, role=`${sitestructure.page.common.navigation.aside.role}`)
+  h1(id=`${sitestructure.page.common.navigation.aside.logo.id}`)
+    a(href="/")
+      span.img(style="background-image: url(" + favicon + ");")
+      | #{config.site.name}
+      br
+      | #{config.site.subTitle}
+  nav(id=`${sitestructure.page.common.navigation.aside.nav_list.id}`, role=`${sitestructure.page.common.navigation.aside.nav_list.role}`)
+    ul
+      each page in config.settings.pages
+         li(class=(thisPage.url === page.url) ? `${sitestructure.page.common.navigation.aside.nav_list.nav_item.active_class}` : `${sitestructure.page.common.navigation.aside.nav_list.nav_item.default_class}`)
+           a(href=page.url) #{page.title}
+  div(class=`${sitestructure.page.common.navigation.aside.footer.class}`)
+    if config.contact.email
+      h3 Contact
+      - var mailicon = false
+      include emaillink

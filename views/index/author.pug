@@ -1,0 +1,17 @@
+span(class=`${sitestructure.text.header.subheader.class}`)
+  | Hello! I'm
+h1(class=`${sitestructure.text.big.class}`)
+  | #{config.author.name}
+h1(class=`${sitestructure.text.header.level4.class}`)
+  span
+    | #{config.author.name}
+  | #{config.author.title}
+  br
+  span
+    | #{config.author.slogan}
+p(class=`${sitestructure.text.header.level4.class}`)
+  | #{config.author.description}
+h3(class=`${sitestructure.text.written.class} ${sitestructure.text.header.level1.class}`)
+  | #{config.author.name} - #{config.site.name}
+ul(class=`${sitestructure.socials.list.class}`)
+  include ../includes/socialmedia

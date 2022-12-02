@@ -1,0 +1,7 @@
+//- This supports both with and without a mail icon, include this with '- var mailicon = true" on the line before to enable the mail icon.
+script
+  | phone = "#{config.contact.phone}";
+  | phonelink = "#{helper.toPhoneLink(config.contact.phone)}"
+  | document.write('<a href="' + phonelink + '"><span class="#{sitestructure.page.common.phonelink.span_icon.class}"></span><span class="#{sitestructure.page.common.phonelink.span_text.class}">' + phone + '</span></a>');
+noscript
+  Phonenumber hidden, please enable JavaScript

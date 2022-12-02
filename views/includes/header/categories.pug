@@ -1,0 +1,10 @@
+- var labels = imgStore.getLabels((request.query.album ? helper.pathJoin(baseAlbum, request.query.album) : baseAlbum), helper.toBoolean(request.query.i))
+if (labels.length > 0)
+    p(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.breadcrumbs.class}`) CATEGORIES: 
+        each label in labels
+            em  
+            span(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.breadcrumbs.bread_item.class}`)
+                if (label.name === request.query.category)
+                    span #{helper.toBreadText(label.name)}
+                else
+                    a(href=`${helper.collectionLinkBuilder(thisPage.url, request.query.album, label.name, request.query.i, request.query.h)}`) #{helper.toBreadText(label.name)}

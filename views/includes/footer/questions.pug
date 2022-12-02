@@ -1,0 +1,17 @@
+div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.class}`)
+    div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.container.class}`)
+        h2(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.container.header.class}`) Having a Question?
+        div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.container.div_block.class}`)
+            ul
+                if (config.contact.location)
+                    li
+                        a(href=`https://www.google.com/maps/search/?api=1&query=${config.contact.location}` target="_blank")
+                            span(class=`${sitestructure.page.common.addresslink.span_icon.class}`)
+                            span(class=`${sitestructure.page.common.addresslink.span_text.class}`) #{config.contact.location}
+                if (config.contact.phone)
+                    li
+                        include ../phonelink
+                if (config.contact.email)
+                    li
+                        - var mailicon = true
+                        include ../emaillink

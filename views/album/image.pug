@@ -1,0 +1,6 @@
+div(class=`${sitestructure.page.album.section.imgtable.row.item.class}`)
+    a(href=`img?id=${image.id}&height=${config.images.view.height}&width=${config.images.view.height}` class=`${sitestructure.page.album.section.imgtable.row.item.link.class}` style=`background-image: url('img?id=${image.id}&height=${config.images.view.height}&width=${config.images.view.height}');`)
+        div(class=`${sitestructure.page.album.section.imgtable.row.item.link.overlay.class}`)
+        div(class=`${sitestructure.page.album.section.imgtable.row.item.link.text_block.class}`)
+            h3(class=`${sitestructure.page.album.section.imgtable.row.item.link.text_block.header.class}`) #{image.title}
+            span(class=`${sitestructure.page.album.section.imgtable.row.item.link.text_block.text.class}`) #{image.description}

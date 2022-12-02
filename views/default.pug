@@ -1,0 +1,26 @@
+doctype html
+- var baseAlbum = (request.query.h && helper.toBoolean(request.query.h) ? config.images.hiddenAlbum : thisPage.name)
+html
+  head
+    title #{title}
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    each link in sitestructure.head.linklist
+      link(rel=`${link.rel}`, href=`${link.href}`)
+		
+    link(rel="shortcut icon", type="image/png", href=favicon)
+  body
+    div(id=`${sitestructure.page.common.base.div_navigation.id}` class=`${sitestructure.page.common.base.div_navigation.class}`)
+      include includes/nav
+
+    div(id=`${sitestructure.page.common.base.div_content.id}` class=`${sitestructure.page.common.base.div_content.class}`)
+      block content
+
+    div(id=`${sitestructure.page.common.base.div_loader.id}` class=`${sitestructure.page.common.base.div_loader.class}`)
+        svg.circular(width="48px", height="48px")
+            circle.path-bg(cx="24", cy="24", r="22", fill="none", stroke-width="4", stroke=`${sitestructure.page.common.base.div_loader.bg_color}`)
+            circle.path(cx="24", cy="24", r="22", fill="none", stroke-width="4", stroke-miterlimit="10", stroke=`${sitestructure.page.common.base.div_loader.color}`)
+
+    each script in sitestructure.scripts
+      script(src=`${script}`)

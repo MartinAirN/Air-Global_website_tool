@@ -1,0 +1,10 @@
+- var albums = imgStore.getFolders((request.query.album ? helper.pathJoin(baseAlbum, request.query.album) : baseAlbum))
+if (albums.length > 0)
+    p(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.breadcrumbs.class}`) ALBUMS: 
+        each album in albums
+            em  
+            span(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.breadcrumbs.bread_item.class}`)
+                if (album === request.query.album)
+                    span #{helper.toBreadText(album)}
+                else
+                    a(href=`${helper.collectionLinkBuilder(thisPage.url, album, undefined, undefined, request.query.h)}`) #{helper.toBreadText(album)}

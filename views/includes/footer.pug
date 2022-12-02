@@ -1,0 +1,10 @@
+footer(class=`${sitestructure.page.common.footer.class}`)
+    div(class=`${sitestructure.page.common.footer.div_footer.class}`)
+        div(class=`${sitestructure.page.common.footer.div_footer.div_table.class}`)
+            div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.class}`)
+                include footer/recentphotos
+                include footer/archives
+                include footer/questions
+            div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_empty_row.class}`)
+            div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_spacer.class}`)
+            p Copyright ©<script>document.write(new Date().getFullYear());</script> !{sitestructure.page.common.footer.copyright_text}

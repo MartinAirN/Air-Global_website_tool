@@ -1,0 +1,2 @@
+each image in imgStore.getImagesSorted((request.query.album ? helper.pathJoin(baseAlbum, request.query.album) : baseAlbum), (request.query.r ? request.query.r : (request.query.album ? helper.toBoolean(config.images.view.sortOrder.albumReverse) : helper.toBoolean(config.images.view.sortOrder.collectionReverse))), -1, helper.toBoolean(request.query.i), request.query.category)
+    include image

@@ -1,0 +1,105 @@
+{
+	"error": {
+		"image_not_found": "images/not-found-2384304_1280.jpg"
+	},
+    "site": {
+        "name": "Air-Global",
+        "subTitle": "Photography",
+        "logo": "images/Logo_Air-Global_3.0_200x200.png",
+		"folders": {
+			"images": "images/",
+			"cache": "cache/"
+		}
+    },
+    "author": {
+        "name": "Martin Rijntjes",
+        "title": "A Photographer.",
+        "slogan": "Appreciate the present",
+        "description": "I am a Photograper from the Netherlands, in the corner of Western Europe. I Capture nature, animals, cars and people in their natural habitats."
+    },
+    "contact": {
+        "email": {
+            "user": "photography",
+            "domain": "air-global.nl"
+        },
+        "location": "Leerdam, The Netherlands",
+		"phone": "+316 49 727 430"
+    },
+    "socialMedia": {
+		"instagramUrl": "https://www.instagram.com/martinrijntjes/",
+		"istagramImageCount": "5",
+		"facebookUrl": "",
+		"twitterUrl": ""
+	},
+	"images": {
+		"hiddenAlbum": "hiddenAlbums",
+		"author": "author/",
+		"instagram": "instagram/",
+		"albumSubTitleFile": "note.txt",
+		"view": {
+			"quality": 80,
+			"width": "1949",
+			"height": "1949",
+			"thumbnail": {
+				"width": "400",
+				"height": "400"
+			},
+			"sortOrder": {
+				"collectionReverse": "true",
+				"albumReverse": "false"
+			}
+		}
+	},
+	"settings": {
+		"maxFooterCategories": "5",
+		"pages": [
+			{
+				"url": "/", "__urlcomment__": "Do not change",
+				"name": "index",
+				"title": "Home"
+			},
+			{
+				"url": "/collection", "__urlcomment__": "Do not change",
+				"name": "album", "__namecomment__": "Used as base image directory",
+				"title": "Collection"
+			},
+			{
+				"url": "/services", "__urlcomment__": "Do not change",
+				"name": "services",
+				"title": "Services"
+			}
+		]
+	},
+	"services": {
+		"studio": {
+			"title": "For Hire",
+			"description": "Would you like to hire me as a photographer for your event or other situation, this is possible.",
+			"icon": "flaticon-camera"
+		},
+		"equipment": {
+			"title": "Equipment",
+			"description": "To any situation I bring my own equipment. With this I am able to capture situations from close by to far away with great detail.",
+			"icon": "flaticon-big-lens"
+		},
+		"print": {
+			"title": "Printing",
+			"description": "I myself do not have any printing services.\nI do have experience with some services available in the Netherlands, maybe I can steer you in the right direction.",
+			"icon": "flaticon-printing-photo"
+		},
+		"focus": {
+			"title": "Focus",
+			"description": "During shoots I have full focus on delivering the best result with great attention for detail.",
+			"icon": "flaticon-focusing-target"
+		},
+		"pictures": {
+			"title": "Buy a Picture",
+			"description": "Would you like to use/buy any of the photographs show on this website or seen elsewhere marked with Air-Global.nl? This is possible.",
+			"icon": "flaticon-polaroid-pictures"
+		},
+		"film": {
+			"title": "Film or Digital",
+			"description": "All pictures taken shall be captured digitally.",
+			"icon": "flaticon-film"
+		}
+	}
+}

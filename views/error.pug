@@ -1,0 +1,9 @@
+extends default
+
+block content
+  include includes/simpleheader
+  section(class=`${sitestructure.page.error.section.class}`)
+    div(class=`${sitestructure.page.error.section.div_container.class}`)
+      div(class=`${sitestructure.page.error.section.div_container.row.class}`)
+        h2 #{error}
+  include includes/footer

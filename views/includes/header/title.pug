@@ -1,0 +1,7 @@
+if (!request.query.album && !request.query.category)
+    h1(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.title.class}`) #{helper.toTitleText(thisPage.title)}
+else
+    h1(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.title.class}`) #{helper.toTitleText((request.query.album ? request.query.album + (request.query.category ? " > " : "") : "") + (request.query.category ? helper.toTitleText(request.query.category) : ""))}
+- let subTitle = imgStore.getSubTitle(request.query.album ? helper.pathJoin(baseAlbum, request.query.album) : baseAlbum);
+if (subTitle)
+    p(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.subtitle.class}`) #{subTitle}

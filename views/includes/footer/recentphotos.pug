@@ -1,0 +1,8 @@
+div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.class}`)
+    div(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.images_container.class}`)
+        h2(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.images_container.header.class}`) Recent Photos 
+        ul(class=`${sitestructure.page.common.footer.div_footer.div_table.div_table_row.content.images_container.list.class}`)
+            each page in config.settings.pages
+                if (page.url === "/collection")
+                    each image in imgStore.getImagesSorted("album", true, 6, true)
+                        include recentphoto

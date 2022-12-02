@@ -1,0 +1,17 @@
+span(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.breadcrumbs.bread_item.class}`)
+    each page in config.settings.pages
+        if (page.url === '/')
+            a(href=page.url) #{helper.toBreadText(page.title)}
+if (!request.query.album && !request.query.category)
+    span #{helper.toBreadText(thisPage.title)}
+else
+    span(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.breadcrumbs.bread_item.class}`)
+        a(href=`${helper.collectionLinkBuilder(thisPage.url, undefined, undefined, request.query.i, request.query.h)}`) #{helper.toBreadText(thisPage.title)}
+    if (request.query.album && !request.query.category)
+        span #{helper.toBreadText(request.query.album)}
+    else if (request.query.album)
+        span(class=`${sitestructure.page.common.header.div_container.div_allignment.div_title.breadcrumbs.bread_item.class}`)
+            a(href=`${helper.collectionLinkBuilder(thisPage.url, request.query.album, undefined, request.query.i, request.query.h)}`) #{helper.toBreadText(request.query.album)}
+        span #{helper.toBreadText(request.query.category)}
+    else
+        span #{helper.toBreadText(request.query.category)}

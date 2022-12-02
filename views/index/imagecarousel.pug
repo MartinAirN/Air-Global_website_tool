@@ -1,0 +1,4 @@
+- var carouselImages = imgStore.getImages(config.images.author, undefined, true, request.query.category)
+each item in Object.keys(carouselImages)
+    if (carouselImages[item].id)
+        div(class=`${sitestructure.page.index.section_top.div_wrapping.div_content.div_images.section.div_item.class}` style=`background-image: url(img?id=${carouselImages[item].id}&height=${config.images.view.height}&width=${config.images.view.height}); height: 373px;`)

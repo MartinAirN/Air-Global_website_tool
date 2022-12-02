@@ -1,0 +1,10 @@
+//- This supports both with and without a mail icon, include this with '- var mailicon = true" on the line before to enable the mail icon.
+script
+  | user = "#{config.contact.email.user}";
+  | domain = "#{config.contact.email.domain}";
+  if mailicon
+    | document.write('<a href="mailto:' + user + '@' + domain + '"><span class="#{sitestructure.page.common.emaillink.span_icon.class}"></span><span class="#{sitestructure.page.common.emaillink.span_text.class}">' + user + '@' + domain + '</span></a>');
+  else
+    | document.write('E-mail: <a href="mailto:' + user + '@' + domain + '">' + user + '@' + domain + '</a>');
+noscript
+  Email hidden, please enable JavaScript

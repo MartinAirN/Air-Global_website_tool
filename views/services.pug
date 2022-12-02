@@ -1,0 +1,18 @@
+extends default
+
+block content
+  include includes/breadheader
+  section(class=`${sitestructure.page.services.section.class}`)
+    div(class=`${sitestructure.page.services.section.div_table.class}`)
+      div(class=`${sitestructure.page.services.section.div_table.div_cell.class}`)
+        each item in Object.keys(config.services)
+          div(class=`${sitestructure.page.services.section.div_table.div_cell.item.class}`)
+            div(class=`${sitestructure.page.services.section.div_table.div_cell.item.item_block.class}`)
+              div(class=`${sitestructure.page.services.section.div_table.div_cell.item.item_block.div_icon_container.class}`)
+                div(class=`${sitestructure.page.services.section.div_table.div_cell.item.item_block.div_icon_container.div_icon.class}`)
+                  span(class=config.services[item].icon)
+              div(class=`${sitestructure.page.services.section.div_table.div_cell.item.item_block.div_text_container.class}`)
+                h3(class=`${sitestructure.page.services.section.div_table.div_cell.item.item_block.div_text_container.header.class}`) #{config.services[item].title}
+                each section in config.services[item].description.split(/\r?\n/)
+                  p #{section}
+  include includes/footer

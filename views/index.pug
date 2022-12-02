@@ -1,0 +1,15 @@
+extends default
+
+block content
+  section(class=`${sitestructure.page.index.section_top.class}`)
+    div(class=`${sitestructure.page.index.section_top.div_wrapping.class}`)
+      div(class=`${sitestructure.page.index.section_top.div_wrapping.div_extra.class}`)
+      div(class=`${sitestructure.page.index.section_top.div_wrapping.div_content.class}`)
+        div(class=`${sitestructure.page.index.section_top.div_wrapping.div_content.div_images.class}`)
+          section(class=`${sitestructure.page.index.section_top.div_wrapping.div_content.div_images.section.class}`)
+            include index/imagecarousel
+        div(class=`${sitestructure.page.index.section_top.div_wrapping.div_content.div_author.class}`)
+          div(class=`${sitestructure.page.index.section_top.div_wrapping.div_content.div_author.div_textbox.class}`)
+            include index/author
+  include index/instagram
+  include includes/footer

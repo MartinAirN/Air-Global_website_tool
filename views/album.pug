@@ -1,0 +1,9 @@
+extends default
+
+block content
+  include includes/breadheader
+  section(class=`${sitestructure.page.album.section.class}`)
+    div(class=`${sitestructure.page.album.section.imgtable.class}`)
+      div(class=`${sitestructure.page.album.section.imgtable.row.class}`)
+        include album/images
+  include includes/footer
